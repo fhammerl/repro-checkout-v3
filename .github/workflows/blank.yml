@@ -12,9 +12,9 @@ jobs:
         usr: [root]
     name: runner / gotest
     runs-on: ${{ matrix.os }}
-    container: 
-      image: alvisisme/docker-ubuntu-non-root-with-utils:latest    
-      options: --user ${{ matrix.usr }}
+    #container: 
+    #  image: alvisisme/docker-ubuntu-non-root-with-utils:latest    
+    #  options: --user ${{ matrix.usr }}
     steps:
       - run: whoami   
       - run: id
