@@ -9,7 +9,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, self-hosted]
-        usr: [dev]
+        usr: [root]
     name: runner / gotest
     runs-on: ${{ matrix.os }}
     container: 
