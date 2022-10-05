@@ -10,11 +10,6 @@ jobs:
     runs-on: self-hosted
     container: ghcr.io/runatlantis/testing-env:2021.08.31
     steps:
-      # user in image needs write access to do anything
-      - name: setup
-        run: sudo chmod -R 777 $GITHUB_WORKSPACE /github /__w/_temp && sleep 10
-      - name: sleep
-        run: sleep 10
       - uses: actions/checkout@v3.1.0      
       - name: sleep post checkout
         run: sleep 10
