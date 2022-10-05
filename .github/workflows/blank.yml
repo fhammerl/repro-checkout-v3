@@ -9,20 +9,22 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, self-hosted]
-        usr: [root]
+       # usr: [dev]
     name: runner / gotest
     runs-on: ${{ matrix.os }}
-    #container: 
-    #  image: alvisisme/docker-ubuntu-non-root-with-utils:latest    
-    #  options: --user ${{ matrix.usr }}
+    container: 
+      image: alvisisme/docker-ubuntu-non-root-with-utils:latest    
+      # options: --user ${{ matrix.usr }}
     steps:
       - run: whoami   
       - run: id
       # - run: sudo chown -R dev:dev /__w/_temp && echo “color=green” >> $GITHUB_ENV    
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v3.1.0
   usrid:
+    matrix:
+      os: [ubuntu-latest, self-hosted]
     name: runneruserid
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     steps:
       - run: whoami   
       - run: id
