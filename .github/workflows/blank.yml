@@ -16,11 +16,8 @@ jobs:
       image: alvisisme/docker-ubuntu-non-root-with-utils:latest    
       options: --user ${{ matrix.usr }}
     steps:
-      - run: whoami
-      - run: echo ${{ github.workspace }}
-      - run: echo $GITHUB_WORKSPACE      
-#######      - run: sudo chown -R $USER:$USER /__w/_temp
+      - run: whoami   
+      - run: sudo chown -R $USER:$USER /__w/_temp
       - run: echo “color=green” >> $GITHUB_ENV    
-      - run: echo “color=green” >> $GITHUB_OUTPUT 
       - uses: actions/checkout@v3.1.0
   
