@@ -10,7 +10,7 @@ jobs:
         os: [ubuntu-latest, self-hosted]
     name: runner / gotest
     runs-on: ${{ matrix.os }}
-    container: ghcr.io/runatlantis/testing-env:2021.08.31
+    container: ubuntu:latest
     steps:
       - run: whoami
       - uses: actions/checkout@v3.1.0
