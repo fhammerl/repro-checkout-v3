@@ -20,7 +20,7 @@ jobs:
       - run: id
       # - run: sudo chown -R dev:dev /__w/_temp && echo “color=green” >> $GITHUB_ENV    
       - uses: actions/checkout@v3.1.0
-  test:
+  usrid:
     name: runneruserid
     runs-on: ubuntu-latest
     steps:
