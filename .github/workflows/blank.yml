@@ -10,13 +10,8 @@ jobs:
         os: [ubuntu-latest, self-hosted]
     name: runner / gotest
     runs-on: ${{ matrix.os }}
-    container: ubuntu:latest
+    container: alvisisme/docker-ubuntu-non-root-with-utils:latest
     steps:
       - run: whoami
       - uses: actions/checkout@v3.1.0
-  whoamihost:
-    name: runner / gotest
-    runs-on: ubuntu-latest
-    steps:
-      - run: whoami
-      - uses: actions/checkout@v3.1.0
+  
