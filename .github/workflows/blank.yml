@@ -18,6 +18,11 @@ jobs:
     steps:
       - run: whoami   
       - run: id
-      - run: sudo chown -R dev:dev /__w/_temp && echo “color=green” >> $GITHUB_ENV    
+      # - run: sudo chown -R dev:dev /__w/_temp && echo “color=green” >> $GITHUB_ENV    
       - uses: actions/checkout@v3.1.0
-  
+  test:
+    name: runneruserid
+    runs-on: ubuntu-latest
+    steps:
+      - run: whoami   
+      - run: id
