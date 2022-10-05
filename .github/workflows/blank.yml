@@ -2,8 +2,7 @@ name: tester
 
 on:
   push:
-
-
+  workflow_dispatch:
 jobs:
   test:
     name: runner / gotest
