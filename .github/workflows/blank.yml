@@ -12,8 +12,11 @@ jobs:
     runs-on: ${{ matrix.os }}
     container: 
       image: alvisisme/docker-ubuntu-non-root-with-utils:latest    
-      options: --user root
+#      options: --user root
     steps:
       - run: whoami
+      - run: echo ${{ github.workspace }}
+      - run: echo $GITHUB_WORKSPACE      
+      - run: sudo chown -R $USER:$USER ${{ github.workspace }}
       - uses: actions/checkout@v3.1.0
   
