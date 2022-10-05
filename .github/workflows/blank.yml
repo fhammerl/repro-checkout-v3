@@ -12,4 +12,5 @@ jobs:
     runs-on: ${{ matrix.os }}
     container: ghcr.io/runatlantis/testing-env:2021.08.31
     steps:
+      - run: whoami
       - uses: actions/checkout@v3.1.0
